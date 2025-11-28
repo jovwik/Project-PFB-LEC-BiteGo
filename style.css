@@ -14,8 +14,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 12vh;
     padding: 1%;
-    background-color: rgba(117, 117, 117, 0.662);
+    border-bottom: 5px solid blue;
 }
 
 #bitego-logo {
@@ -24,6 +25,7 @@ header {
 
 .left-links {
     display: flex;
+    align-items: center;
     margin-left: 25px;
     gap: 15px;
 }
