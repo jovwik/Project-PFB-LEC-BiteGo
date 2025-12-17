@@ -9,6 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="home-page">
     <nav>
@@ -38,7 +39,10 @@ session_start();
                 <div class="info">
                     <h3>Nasi Loca Healthy Indonesian Rice Bowl Mini Calore</h3>
                     <br>
-                    <p>Location: Kuningan</p>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Kuningan</span>
+                    </div>
                 </div>
             </div>
 
@@ -49,7 +53,10 @@ session_start();
                     <br>
                     <br>
                     <br>
-                    <p>Location: Sudirman</p>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Sudirman</span>
+                    </div>
                 </div>
             </div>
             <div class="menu-card">
@@ -59,7 +66,10 @@ session_start();
                     <br>
                     <br>
                     <br>
-                    <p>Location: Lippo Mall Puri</p>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Lippo Mall Puri</span>
+                    </div>
                 </div>
             </div>
         </div>
