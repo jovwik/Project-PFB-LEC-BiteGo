@@ -6,7 +6,7 @@
     <title>Onboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-onboard">
     <nav>
         <img src="assets/PAWHUB.png" alt="Logo">
         <a href="Home.php">Home</a>
@@ -21,8 +21,6 @@
             <a href="register.php" class="signup">SIGN UP</a>
             <a href="login.php" class="login">LOG IN</a>
         </div>
-
-
     </div>
     </section>
 
