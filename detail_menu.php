@@ -26,36 +26,32 @@ $menu = mysqli_fetch_assoc($query);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Detail Menu</title>
+    <title>Detail-Menu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="detail_menu.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header>
-        <div class="logo">
-            <img src="PAWHUB.png" alt="Logo">
-            <a href="home.php">Home</a>
+<body class="detail-menu-page">
+     <nav>
+        <img src="assets/PAWHUB.png" alt="Logo">
+        <div class="nav-left">
+            <a href="home_guest.php">Home</a>
+            <a href="cart.php">Cart</a>
+            <a href="logout.php">Logout</a>
         </div>
-
-        <?php if(!$isLogin): ?>
-            <a href="login.php" class="btn-login">Login</a>
-        <?php else: ?>
-            <div class="user-info">
-                <span>Hi, <?= htmlspecialchars($_SESSION['user_name']); ?></span>
-                <a href="logout.php" class="btn-login">Logout</a>
-            </div>
-        <?php endif; ?>
-    </header>
-
+        
+        <a class="login-btn">
+            <?php isset($_SESSION['name']) ?>
+                <?php echo htmlspecialchars($_SESSION['name']); ?>
+        </a>
+    </nav>
     <header>
-        <a href="detail.php?id=<?= $menu['vendor_id']; ?>" class="back-btn">← Detail Menu</a>
+        <a href="detail.php?id=<?= $menu['vendor_id']; ?>" class="back-btn">← ‎ ‎ Detail Menu</a>
     </header>
 
     <div class="container">
 
         <div class="menu-card">
-            <img src="assets/menu1.jpg" alt="Menu">
+            <img src="assets/NasiLoca.jpg" alt="Menu">
 
             <h2>
                 <?= htmlspecialchars($menu['name']); ?>
@@ -68,7 +64,7 @@ $menu = mysqli_fetch_assoc($query);
 
             <div class="nutrition">
                 <span>Carbo<br><b><?= $menu['carbo']; ?> gr</b></span>
-                <span>Protein<br><b><?= $menu['protein']; ?> gr</b></span>
+                <span>Protein<br><b><?= $menu['calorie']; ?> gr</b></span>
                 <span>Fat<br><b><?= $menu['fat']; ?> gr</b></span>
             </div>
         </div>
@@ -89,12 +85,11 @@ $menu = mysqli_fetch_assoc($query);
             </div>
 
             <?php if($isLogin): ?>
-            <form action="add_to_cart.php" method="POST">
-                <input type="hidden" name="menu_id" value="<?= $menu['id']; ?>">
-                <button type="submit" class="add-cart">Add to Cart</button>
-            </form>
+                <button class="add-cart">Add to Cart</button>
             <?php else: ?>
-            <a href="login.php" class="add-cart login-cart">Login to Add</a>
+                <a href="login.php" class="add-cart login-cart">
+                    Login to Add
+                </a>
             <?php endif; ?>
 
         </div>
@@ -103,4 +98,3 @@ $menu = mysqli_fetch_assoc($query);
 
 </body>
 </html>
-
