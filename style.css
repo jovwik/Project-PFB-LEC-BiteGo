@@ -2,159 +2,304 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #b7b9ff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 20px;
+    background-color: #f4fbff;
+}
+
+nav img {
+    width: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* ======Onboard Page===== */
+
+.page-onboard .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.page-onboard .card {
+    background-color: white;
+    width: 320px;
+    height: 450px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.page-onboard .card-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.page-onboard .card p {
+    font-size: 14px;
+    margin-bottom: 55px;
+    font-weight: bold;
+}
+
+.page-onboard #opt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.page-onboard #opt a {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.page-onboard .signup {
+    background-color: #6f74ff;
+    color: white;
+}
+
+.page-onboard .login {
+    background-color: #d9d9d9;
+    color: black;
 }
 
 
+/* =====Register Page ====== */
+.page-register #register-form {
+    width: 360px;
+    background-color: white;
+    margin: 60px auto;
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.page-register .card-logo {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.page-register h3 {
+    color: #5a5aff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.page-register #register-form div {
+    margin-bottom: 12px;
+}
+
+.page-register input {
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px rgb(160, 160, 160);
+    background-color: #e0e0e0;
+    padding: 5px 15px;
+    outline: none;
+    font-size: 12px;
+}
+
+.page-register input:focus {
+    background-color: #d6d6ff;
+}
+
+.page-register #register-button {
+    width: 100%;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5a5aff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.page-register #register-form p {
+    font-size: 12px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.page-register #register-form a {
+    color: #5a5aff;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 
+/* ====== Login Page ====== */
 
-header {
+.page-login #login-form {
+    width: 360px;
+    background-color: white;
+    margin: 60px auto;
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.page-login .card-logo {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.page-login h3 {
+    color: #5a5aff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.page-login #login-form div {
+    margin-bottom: 12px;
+}
+
+.page-login input {
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px rgb(160, 160, 160);
+    background-color: #e0e0e0;
+    padding: 5px 15px;
+    outline: none;
+    font-size: 12px;
+}
+
+.page-login input:focus {
+    background-color: #d6d6ff;
+}
+
+.page-login #login-button {
+    width: 100%;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5a5aff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.page-login #login-form p {
+    font-size: 12px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.page-login #login-form a {
+    color: #5a5aff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* ========Home======= */
+
+.home-page nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 12vh;
-    padding: 1%;
-    border-bottom: 5px solid blue;
+    padding: 16px 40px;
+    background-color: #f8fbff;
 }
 
-#bitego-logo {
-    width: 80px;
-}
-
-.left-links {
+/* NAV LEFT */
+.home-page .nav-left {
     display: flex;
     align-items: center;
-    margin-left: 25px;
-    gap: 15px;
+    gap: 16px;
 }
 
-.search-bar {
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid black;
-    background-color: whitesmoke;
-    width: 300px;
-    padding: 10px;
-    margin-left: calc(50% - 330px);
-    margin-right: calc(50% - 200px);
+.home-page .login-btn {
+    background-color: #4a4cff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-#right-link {
-    display: flex;
+.home-page .login-btn:hover {
+    background-color: #3737d9;
 }
 
-.search-bar input {
+/* LINE */
+.home-page hr {
     border: none;
-    width: 210px;
-    margin-left: 10px;
-    font-size: large;
+    height: 2px;
+    background-color: #4a4cff;
 }
 
-.search-bar input:focus {
-    outline: none;
+/* BANNER */
+.home-page .banner {
+    margin: 30px 40px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #4a4cff;
 }
 
-.search-bar input::placeholder {
-    background-color: whitesmoke;
-    color: #999;
+.home-page .banner img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
 }
 
-#search-symbol {
-    width: 25px;
+/* RECOMMENDATION */
+.home-page .recommendations {
+    padding: 40px;
 }
 
-
-
-
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5em;
-}
-
-.banner div {
-    position: absolute;
-}
-
-.banner img {
-    height: 43vh;
-}
-
-.recommendations {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-
-.recommendations h1 {
-    margin: 30px;
-}
-
-.recommend-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3em;
-    justify-content: center;
-    align-items: center;
-}
-
-.rec-image {
-    width: 27%;
-}
-
-
-
-
-.body {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    background-color: #B2B2FF;
-    height: 88vh;
-}
-
-.reg-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: 9vh;
-    width: 40vw;
-    gap: 1vw;
-    background-color: white;
-}
-
-.reg-form input {
-    padding: 10px;
-    height: 50px;
-    width: 360px;
-}
-
-.reg-form input::placeholder {
-    font-size: 1.3em;
-}
-
-#submit-btn {
-    width: 400px;
-    height: 40px;
-    background-color: #7575FF;
-    border: none;
-    font-size: 16px;
-    color: white;
+.home-page .recommendations h2 {
+    font-size: 24px;
     font-weight: 700;
+    margin-bottom: 24px;
+}
+
+/* CARD CONTAINER */
+.home-page .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* SHOW ALL BUTTON */
+.home-page button {
+    display: block;
+    margin: 0 auto 40px;
+    padding: 10px 28px;
+    border-radius: 20px;
+    border: none;
+    background-color: #4a4cff;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-page button:hover {
+    background-color: #3737d9;
 }
