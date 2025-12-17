@@ -30,10 +30,24 @@ if(!empty($cart)){
     <meta charset="UTF-8">
     <title>Pembayaran</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="checkout-page">
+
+     <nav>
+        <img src="assets/PAWHUB.png" alt="Logo">
+        <div class="nav-left">
+            <a href="home_guest.php">Home</a>
+            <a href="cart.php">Cart</a>
+            <a href="logout.php">Logout</a>
+        </div>
+        
+        <a class="login-btn">
+            <?php isset($_SESSION['name']) ?>
+                <?php echo htmlspecialchars($_SESSION['name']); ?>
+        </a>
+    </nav>
 
     <h2 class="page-title">Order Detail</h2>
 
@@ -41,7 +55,7 @@ if(!empty($cart)){
 
         <div class="address-box">
             <label>Address</label>
-            <textarea placeholder="Masukkan alamat lengkap pengiriman"></textarea>
+            <textarea placeholder="Enter Address"></textarea>
         </div>
 
         <div class="order-list">
@@ -55,7 +69,7 @@ if(!empty($cart)){
                         <h4><?= htmlspecialchars($o['name']); ?></h4>
                         <p class="nutrition">
                             Carbo <?= $o['carbo']; ?>gr •
-                            Protein <?= $o['protein']; ?>gr •
+                            Protein <?= $o['calorie']; ?>gr •
                             Fat <?= $o['fat']; ?>gr
                         </p>
                         <p class="price">Rp<?= number_format($o['price'],0,',','.'); ?></p>
