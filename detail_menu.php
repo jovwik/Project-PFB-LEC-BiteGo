@@ -89,11 +89,12 @@ $menu = mysqli_fetch_assoc($query);
             </div>
 
             <?php if($isLogin): ?>
-                <button class="add-cart">Add to Cart</button>
+            <form action="add_to_cart.php" method="POST">
+                <input type="hidden" name="menu_id" value="<?= $menu['id']; ?>">
+                <button type="submit" class="add-cart">Add to Cart</button>
+            </form>
             <?php else: ?>
-                <a href="login.php" class="add-cart login-cart">
-                    Login to Add
-                </a>
+            <a href="login.php" class="add-cart login-cart">Login to Add</a>
             <?php endif; ?>
 
         </div>
@@ -102,3 +103,4 @@ $menu = mysqli_fetch_assoc($query);
 
 </body>
 </html>
+
