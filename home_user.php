@@ -1,5 +1,13 @@
 <?php
 session_start();
+include 'db_connect.php';
+
+$isLogin = isset($_SESSION['user_id']);
+$vendors = mysqli_query($conn, "
+    SELECT id, name 
+    FROM users 
+    WHERE role = 'vendor'
+");
 ?>
 
 <!DOCTYPE html>
