@@ -1,3 +1,38 @@
+<?php
+session_start();
+include 'db_connect.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $email    = $_POST['email'];
+    $password = $_POST['pass'];
+
+    $query = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) === 1) {
+        $user = mysqli_fetch_assoc($result);
+
+        if ($password === $user['password']) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['role']    = $user['role'];
+            $_SESSION['name']    = $user['name'];
+
+            if ($user['role'] === 'vendor') {
+                header("Location: vendor_dashboard.php");
+            } else {
+                header("Location: home_user.php");
+            }
+            exit;
+        } else {
+            echo "Password salah!";
+        }
+    } else {
+        echo "Email tidak ditemukan!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +44,7 @@
 <body class="page-login">
     <nav>
         <img src="assets/PAWHUB.png" alt="Logo">
-        <a href="Home.php">Home</a>
+        <a href="home_guest.php">Home</a>
     </nav>
 
     <form id="login-form" action="login.php" method="POST">
@@ -29,10 +64,10 @@
         </div>
 
 
-        <button id="login-button" type="submit">Login</button>
+        <button id="login-button" type="submit">SIGN IN</button>
 
         <div>
-            <p>Don’t have an account? <a href="register.php">Register Here</a> </p>
+            <p>Don’t have an account? <a href="register.php">Sign Up</a> </p>
         </div>
 
     </form>
