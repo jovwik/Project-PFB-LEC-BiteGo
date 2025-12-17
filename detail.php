@@ -85,10 +85,18 @@ $menuQuery = mysqli_query($conn, "
                     </strong>
                 </a>
 
-                <button class="add-cart">Add to Cart</button>
+                <?php if($isLogin): ?>
+                <form action="add_to_cart.php" method="POST">
+                    <input type="hidden" name="menu_id" value="<?= $menu['id']; ?>">
+                    <button type="submit" class="add-cart">Add to Cart</button>
+                </form>
+                <?php else: ?>
+                <a href="login.php" class="add-cart login-cart">Login to Add</a>
+                <?php endif; ?>
             </div>
         <?php endwhile; ?>
     </div>
 
 </body>
+
 </html>
