@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #b7b9ff;
+    background-color: #e4e5ff;
 }
 
 nav {
@@ -219,87 +219,649 @@ nav a {
 
 .home-page nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 16px 40px;
     background-color: #f8fbff;
+    border-bottom: 3px solid #3D3DFF;
 }
 
-/* NAV LEFT */
-.home-page .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.home-page nav img {
+    height: 50px;
+}
+
+.home-page nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 5px;
 }
 
 .home-page .login-btn {
+    margin-left: auto;
     background-color: #4a4cff;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-weight: 600;
-    transition: 0.3s;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
 }
 
-.home-page .login-btn:hover {
-    background-color: #3737d9;
-}
-
-/* LINE */
-.home-page hr {
-    border: none;
-    height: 2px;
-    background-color: #4a4cff;
-}
-
-/* BANNER */
-.home-page .banner {
+.home-page .hero {
     margin: 30px 40px;
     border-radius: 24px;
     overflow: hidden;
-    background-color: #4a4cff;
+    color: white;
+    text-align: center;
 }
 
-.home-page .banner img {
+.home-page .hero img {
     width: 100%;
-    height: 260px;
+    height: 500px;
     object-fit: cover;
     display: block;
+    border-radius: 24px;
 }
 
-/* RECOMMENDATION */
-.home-page .recommendations {
+.home-page .menu-section {
     padding: 40px;
 }
 
-.home-page .recommendations h2 {
-    font-size: 24px;
+.home-page .menu-section h2 {
+    font-size: 30px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-/* CARD CONTAINER */
-.home-page .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.home-page .menu-grid {
+    margin: 50px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
 }
 
-/* SHOW ALL BUTTON */
-.home-page button {
-    display: block;
-    margin: 0 auto 40px;
-    padding: 10px 28px;
+.home-page .menu-card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-page .menu-card img {
+    width: 95%;
+    height: 250px;
+    width: 280px;
+    object-fit: cover;
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.home-page .menu-card .info {
+    padding: 12px 16px;
+    flex: 1;
+}
+
+.home-page .menu-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.home-page .menu-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #292929;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.home-page .button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.home-page .show-all {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 0;
+    padding: 10px 40px;
     border-radius: 20px;
     border: none;
     background-color: #4a4cff;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
     transition: 0.3s;
+    align-items: center;
 }
 
-.home-page button:hover {
+.home-page .show-all:hover {
     background-color: #3737d9;
+}
+
+.home-page .location i {
+    margin: 0;
+    align-items: center;
+    gap: 6px;
+    color: #6b5cff;
+    padding-left: 10px;
+}
+
+.home-page .location span{
+    margin: 0;
+    font-size: 14px;
+    color: #292929;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* ========Vendor======= */
+
+.vendor-page nav {
+    display: flex;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #f8fbff;
+    border-bottom: 3px solid #3D3DFF;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.vendor-page nav img {
+    height: 50px;
+}
+
+.vendor-page nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.vendor-page .login-btn {
+    margin-left: auto;
+    background-color: #4a4cff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+
+/* ========Menu======= */
+
+.menu-page nav {
+    display: flex;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #f8fbff;
+    border-bottom: 3px solid #3D3DFF;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-page nav img {
+    height: 50px;
+}
+
+.menu-page nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.menu-page .login-btn {
+    margin-left: auto;
+    background-color: #4a4cff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.menu-page h2{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 0px;
+    font-size: 40px;
+}
+
+#add_menu {
+width: 500px;
+background: #ffffff;
+margin: 30px auto 40px auto;
+padding: 30px 40px;
+border-radius: 10px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+#add_menu form label {
+font-weight: bold;
+margin-top: 15px;
+margin-bottom: 5px;
+display: block;
+}
+
+#add_menu form input[type="text"],
+#add_menu form textarea{
+width: 100%;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #969494;
+background-color: #D9D9D9;
+}
+
+#add_menu form input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #969494;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    background-color: #D9D9D9;
+}
+
+textarea {
+resize: none;
+height: 100px;
+}
+
+
+#add_menu button {
+margin-top: 30px;
+width: 100%;
+padding: 12px;
+background: #5B5BFF;
+border: none;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+}
+
+
+#add_menu button:hover {
+background: #3f3fff;
+}
+
+
+/* ========Restaurants======= */
+
+.restaurants-page nav {
+    display: flex;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #f8fbff;
+    border-bottom: 3px solid #3D3DFF;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.restaurants-page nav img {
+    height: 50px;
+}
+
+.restaurants-page nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.restaurants-page .login-btn {
+    margin-left: auto;
+    background-color: #4a4cff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+
+.restaurants-page h2 {
+    margin: 30px 40px 20px;
+    font-size: 30px;
+    color: #222;
+}
+
+.restaurants-page .cards {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.restaurants-page .card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.restaurants-page .card {
+    background-color: white;
+    border-radius: 16px;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.restaurants-page .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.restaurants-page .card img {
+    width: 95%;
+    height: 250px;
+    width: 280px;
+    object-fit: cover;
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.restaurants-page .card p {
+    margin: 10px;
+    font-size: 14px;
+    color: #292929;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.restaurants-page .card p:first-of-type {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .restaurants-page nav {
+        padding: 12px 20px;
+    }
+
+    .restaurants-page h1 {
+        margin: 20px;
+    }
+
+    .restaurants-page .cards {
+        padding: 0 20px 30px;
+    }
+}
+
+.restaurants-page .show-all:hover {
+    background-color: #3737d9;
+}
+
+.restaurants-page .location i {
+    margin: 10px;
+    align-items: center;
+    gap: 6px;
+    color: #6b5cff;
+    padding-left: 10px;
+}
+
+.restaurant-page .location span{
+    margin: 0;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* ========Details======= */
+.detail-page nav {
+    display: flex;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #f8fbff;
+    border-bottom: 3px solid #3D3DFF;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.detail-page nav img {
+    height: 50px;
+}
+
+.detail-page nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.detail-page .login-btn {
+    margin-left: auto;
+    background-color: #4a4cff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+
+.detail-page header {
+    padding: 20px 40px;
+}
+
+.detail-page .back-btn {
+    text-decoration: none;
+    color: #5a6bff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.detail-page .vendor-info {
+    display: flex;
+    gap: 24px;
+    padding: 30px 40px;
+    background: #eef0ff;
+}
+
+.detail-page .vendor-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.detail-page .vendor-info h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #111;
+}
+
+.detail-page .vendor-info p {
+    margin: 6px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.detail-page .menu-title {
+    padding: 20px 40px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+}
+
+
+.detail-page .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 16px 32px 40px;
+}
+
+
+.detail-page .menu-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 12px;
+    border: 1px solid #e5e7ff;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-page .menu-card:hover {
+    transform: translateY(-4px);
+}
+
+.detail-page .menu-link {
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
+}
+
+.detail-page .menu-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.detail-page .menu-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4px 0;
+    color: #111;
+}
+
+.detail-page .menu-card p {
+    font-size: 12px;
+    color: #666;
+    margin: 2px 0;
+    line-height: 1.4;
+}
+
+.detail-page .menu-card strong {
+    font-size: 13px;
+    margin-top: 6px;
+    color: #111;
+}
+
+.detail-page .add-cart {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #5f6bff;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.detail-page .add-cart:hover {
+    background: #4b56e6;
+}
+
+.detail-page .login-cart {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .detail-page .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .detail-page .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========Detail Page======= */
+.detail-menu-page nav {
+    display: flex;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #f8fbff;
+    border-bottom: 3px solid #3D3DFF;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.detail-menu-page nav img {
+    height: 50px;
+}
+
+.detail-menu-page nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.detail-menu-page .login-btn {
+    margin-left: auto;
+    background-color: #4a4cff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+
+.detail-menu-page header {
+    padding: 20px 40px;
+}
+
+.detail-menu-page .back-btn {
+    text-decoration: none;
+    color: #5a6bff;
+    font-weight: 600;
+    font-size: 16px;
 }
