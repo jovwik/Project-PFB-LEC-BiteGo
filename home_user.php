@@ -34,44 +34,30 @@ session_start();
         <h2>What's on your mind?</h2>
 
         <div class="menu-grid">
-            <div class="menu-card">
-                <img src="assets/NasiLoca.jpg" alt="Nasi Loca">
-                <div class="info">
-                    <h3>Nasi Loca Healthy Indonesian Rice Bowl Mini Calore</h3>
-                    <br>
-                    <div class="location">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Kuningan</span>
+           <?php while($v = mysqli_fetch_assoc($vendors)): ?>
+                <a href="detail.php?id=<?= $v['id']; ?>" class="card-link">
+                    <div class="card">
+                        <img src="assets/menu1.jpg">
+                        <p>Nasi Loca Healthy Indonesia Rice Bowl by Mini Calore</p>
+                        <p>Kuningan</p>
                     </div>
-                </div>
-            </div>
+                </a>
 
-            <div class="menu-card">
-                <img src="assets/Boost.jpg" alt="Boost Juice Bars">
-                <div class="info">
-                    <h3>Boost Juice Bars</h3>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="location">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Sudirman</span>
+                <a href="detail.php?id=<?= $v['id']; ?>" class="card-link">
+                    <div class="card">
+                        <img src="assets/menu1.jpg">
+                        <p>Boost Juice Bars</p>
+                        <p>WTC Sudirman</p>
                     </div>
-                </div>
-            </div>
-            <div class="menu-card">
-                <img src="assets/Shigeru.jpg" alt="Shigeru Sushi">
-                <div class="info">
-                    <h3>Shigeru Sushi</h3>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="location">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Lippo Mall Puri</span>
+                </a>
+
+                <a href="detail.php?id=<?= $v['id']; ?>" class="card-link">
+                    <div class="card">
+                        <img src="assets/menu1.jpg">
+                        <p>Shigeru Sushi</p>
+                        <p>Lippo Mall Puri</p>
                     </div>
-                </div>
-            </div>
+                </a>
         </div>
         <div class="button-container">
             <a href="" class="show-all">Show All</a>
