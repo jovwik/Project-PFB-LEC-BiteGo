@@ -1,0 +1,70 @@
+<?php
+include 'db_connect.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $username  = $_POST['username'];
+    $email     = $_POST['email'];
+    $password  = $_POST['pass'];
+    $conf_pass = $_POST['conf-pass'];
+
+    if ($password !== $conf_pass) {
+        exit;
+    }
+
+    $role = 'user';
+
+    $query = "INSERT INTO users (name, email, password, role)
+              VALUES ('$username', '$email', '$password', '$role')";
+
+    mysqli_query($conn, $query);
+}
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register-Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-register">
+    <nav>
+        <img src="assets/PAWHUB.png" alt="Logo">
+        <a href="Home.php">Home</a>
+    </nav>
+    
+    <form id="register-form" action="register.php" method="POST">
+         <img src="assets/PAWHUB.png" alt="BiteJoe" class="card-logo">
+        <h3>Sign Up</h3>
+    
+        <div> 
+            <input type="text" id="reg-username" name="username" placeholder="Username">
+        </div>
+
+        <div>
+            <input type="text" id="reg-email" name="email" placeholder="Email">
+        </div>
+
+        <div>
+            <input type="password" id="reg-pass" name="pass" placeholder="Password">
+        </div>
+
+        <div>
+            <input type="password" id="reg-conf-pass" name="conf-pass" placeholder="Confirm Password">
+        </div>
+
+        <button id="register-button" type="submit">SIGN UP</button>
+
+        <div>
+            <p>Already have an account? <a href="login.php">Login Here</a> </p>
+        </div>
+
+    </form>
+
+    <script></script>
+</body>
+</html>
